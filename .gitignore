@@ -7,3 +7,5 @@ webviewPanel.js.map
 webviewPanel.min.js
 extension.min.js
 extension.js.map
+
+.DS_Store

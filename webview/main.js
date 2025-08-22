@@ -1095,9 +1095,21 @@
     if (currentCharCode === 10 && typedSymbolCode === 13) {
       const linesLastCursorPositions = codeState.linesLastCursorPositions;
       linesLastCursorPositions.push(codeState.cursorLeftOffset);
+      
+      // Calculate the correct horizontal position for the next line
+      // by finding the position of the next character after the newline
+      const nextChar = getNextChar();
+      let nextLineLeftOffset = 0;
+      
+      if (nextChar) {
+        const nextCharRect = nextChar.getBoundingClientRect();
+        const codeAreaRect = document.getElementById("code-code").getBoundingClientRect();
+        nextLineLeftOffset = nextCharRect.left - codeAreaRect.left;
+      }
+      
       codeState = {
         ...codeState,
-        cursorLeftOffset: 0,
+        cursorLeftOffset: nextLineLeftOffset,
         cursorTopOffset: codeState.cursorTopOffset + cursorHeight,
         linesLastCursorPositions,
         currentCharNum: codeState.currentCharNum + 1,

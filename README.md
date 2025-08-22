@@ -1,6 +1,24 @@
 # PURPOSE
 
-## This is my modification of the Warm-up Extension for my Project-Liberty. As I noticed a bug when using custom code snippets, that is, the indexer doesn't move horizontally as I type code. Hence, I am forking this extension to modify it.
+## This is my modification of the Warm-up Extension for my Project-Liberty. 
+
+**FIXED BUG**: The cursor positioning issue in code snippets mode has been resolved! When typing code and pressing Enter, the cursor now correctly follows the horizontal indentation instead of jumping to the left edge.
+
+### Bug Fix Details
+- **Issue**: In code snippets mode, when pressing Enter to go to a new line, the cursor would move down vertically but always reset to position 0 horizontally, making it difficult to follow your typing position in indented code.
+- **Solution**: Modified `webview/main.js:1095-1123` to calculate the correct horizontal position of the next character after a newline, ensuring the cursor follows proper code indentation.
+
+### How to Use This Fixed Version
+
+#### Development/Testing:
+1. Open this folder in VS Code
+2. Press `F5` to launch Extension Development Host
+3. In the new window, press `Ctrl+Alt+P` (or `Cmd+Alt+P` on Mac)
+4. Switch to "code snippets" mode and test the fix!
+
+#### Installation:
+1. Package the extension: `npm install -g vsce && vsce package`
+2. Install: `code --install-extension warm-up-typing-test-1.1.0.vsix`
 
 ---
 Original description below
