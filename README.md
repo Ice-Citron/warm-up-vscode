@@ -1,3 +1,11 @@
+# PURPOSE
+
+## This is my modification of the Warm-up Extension for my Project-Liberty. As I noticed a bug when using custom code snippets, that is, the indexer doesn't move horizontally as I type code. Hence, I am forking this extension to modify it.
+
+---
+Original description below
+---
+
 # Warm Up
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/jeusto.warm-up-typing-test.svg)](https://marketplace.visualstudio.com/items?itemName=Jeusto.warm-up-typing-test) [![Downloads](https://img.shields.io/vscode-marketplace/d/jeusto.warm-up-typing-test.svg)](https://marketplace.visualstudio.com/items?itemName=Jeusto.warm-up-typing-test) [![Rating](https://img.shields.io/visual-studio-marketplace/stars/jeusto.warm-up-typing-test.svg)](https://marketplace.visualstudio.com/items?itemName=Jeusto.warm-up-typing-test)
